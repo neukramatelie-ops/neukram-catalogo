@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ef">
+  <meta name="description" content="Catálogo de produtos Neukram. Encontre seus produtos favoritos e compre pelos nossos parceiros.">
+  <title>Neukram | Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Neukram início">
+      <span class="brand-mark">N</span>
+      <span>NEUKRAM<small>CATÁLOGO DE PRODUTOS</small></span>
+    </a>
+    <nav><a href="#catalogo">Catálogo</a><a href="#sobre">Sobre</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FEITO COM CARINHO · ESCOLHIDO PARA VOCÊ</p>
+        <h1>Pequenos detalhes,<br><em>grandes encantos.</em></h1>
+        <p class="hero-text">Explore nosso catálogo e encontre produtos especiais. Ao escolher um item, você será direcionado à plataforma de compra.</p>
+        <a class="primary-link" href="#catalogo">Explorar produtos <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle"></div><div class="art-card"><span>NEUKRAM</span><b>feito para<br>encantar.</b><i>✳</i></div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading">
+        <div><p class="eyebrow">NOSSA SELEÇÃO</p><h2>Encontre seu favorito</h2></div>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+      <div class="tools">
+        <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos"></label>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Nenhum produto encontrado. Tente outra busca ou categoria.</p>
+    </section>
+
+    <section class="about" id="sobre">
+      <p class="eyebrow">SOBRE A NEUKRAM</p>
+      <h2>Inspiração em cada escolha.</h2>
+      <p>Um espaço para reunir produtos criativos, úteis e especiais. Escolha seu favorito e finalize a compra com segurança diretamente na plataforma parceira.</p>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#">NEUKRAM</a><span>© <span id="year"></span> Neukram. Todos os direitos reservados.</span><a href="#catalogo">Voltar ao catálogo ↑</a></footer>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

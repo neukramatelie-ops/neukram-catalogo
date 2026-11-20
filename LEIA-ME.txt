@@ -1,0 +1,46 @@
+# Site catálogo Neukram
+
+Este é um site estático, responsivo e sem mensalidade de hospedagem. Os botões levam às páginas de compra que você cadastrar.
+
+## Arquivos
+- `index.html`: estrutura do site.
+- `style.css`: aparência e cores.
+- `products.js`: cadastro dos produtos e links.
+- `script.js`: busca, filtros e botões.
+- `imagens/`: coloque aqui as fotos dos produtos.
+
+## Como cadastrar produtos
+Abra `products.js` em um editor de texto (por exemplo, Bloco de Notas ou VS Code). Edite os exemplos ou copie um bloco de produto. Preencha:
+- `name`: nome do produto.
+- `category`: categoria.
+- `description`: descrição curta.
+- `price`: preço opcional, por exemplo `"R$ 29,90"`.
+- `image`: caminho da foto, por exemplo `"imagens/kit-letras.jpg"`.
+- `shopee`, `amazon`, `mercadoLivre`: links completos de compra. Deixe sem link a plataforma que não se aplica.
+
+Use links completos começando por `https://`. Salve as fotos dentro da pasta `imagens`.
+
+## Publicar gratuitamente com Cloudflare Pages
+1. Crie uma conta gratuita em https://dash.cloudflare.com/ .
+2. Crie uma conta gratuita em https://github.com/ .
+3. No GitHub, crie um repositório público chamado `neukram-catalogo`.
+4. Envie todos os arquivos e a pasta `imagens` para esse repositório (não envie apenas o ZIP).
+5. No painel Cloudflare, abra **Workers & Pages** > **Create** > **Pages** > **Connect to Git**.
+6. Autorize o GitHub e selecione `neukram-catalogo`.
+7. Em configuração de build:
+   - Framework preset: `None`
+   - Build command: deixe vazio
+   - Build output directory: `/` (ou `.` se o painel pedir)
+8. Clique em **Save and Deploy**. O Cloudflare fornecerá um endereço temporário `...pages.dev`.
+
+## Conectar www.neukram.com.br
+1. No projeto publicado, abra **Custom domains** > **Set up a custom domain**.
+2. Informe `www.neukram.com.br` e siga as instruções apresentadas pela Cloudflare.
+3. Para o domínio raiz `neukram.com.br`, adicione-o também como domínio personalizado se quiser que funcione sem `www`.
+4. A Cloudflare mostrará quais registros DNS precisam ser adicionados no local onde você comprou o domínio. Copie exatamente os valores indicados; não apague outros registros sem conferir.
+5. Aguarde a propagação do DNS e a ativação do certificado HTTPS.
+
+A configuração exata depende de onde o domínio foi registrado e de como o DNS está configurado. Não é necessário comprar hospedagem. O domínio já registrado continua sujeito à renovação normal do registrador.
+
+## Atualizar o site
+Sempre que alterar `products.js`, fotos ou arquivos, envie as alterações ao mesmo repositório GitHub. A Cloudflare fará uma nova publicação automaticamente.
